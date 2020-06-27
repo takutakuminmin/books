@@ -14,6 +14,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
+|title|text||
 |page|integer||
 |line|integer||
 |text|text||
