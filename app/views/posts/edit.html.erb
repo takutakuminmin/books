@@ -1,10 +1,33 @@
+<header class="header">
+  <div class="header__title">
+    <%= link_to "BOOKS", root_path, class: "header__title--text" %>
+  </div>
+  <div class="header__search">
+    <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
+    <% end %>
+  </div>
+  <div class="header__right">
+    <% if user_signed_in? %>
+        <%= link_to current_user.nickname, user_path(current_user), class: "header__right--btn" %>
+        <%= link_to "新規投稿", new_post_path, class: "header__right--btn" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+    <% end %>
+  </div>
+</header>
+<div class="contents">
 <div class="content__title">
   投稿の編集
 </div>
-<%= form_with model: @post, class: :form, local: true do |form| %>
-  <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
-  <%= form.text_field :page, placeholder: :何ページ目？（半角数字）, class: :form__page %>
-  <%= form.text_field :line, placeholder: :何行目？（半角数字）, class: :form__line %>
-  <%= form.text_area :content, placeholder: :コアメッセージ, class: :form__text %>
-  <%= form.submit '投稿する', class: :form__btn %>
-<% end %>
+  <%= form_with model: @post, class: :form, local: true do |form| %>
+    <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
+    <%= form.text_field :page, placeholder: :何ページ目？（半角数字）, class: :form__page %>
+    <%= form.text_field :line, placeholder: :何行目？（半角数字）, class: :form__line %>
+    <%= form.text_area :content, placeholder: :コアメッセージ, class: :form__text %>
+    <%= form.submit '投稿する', class: :form__btn %>
+  <% end %>
+</div>

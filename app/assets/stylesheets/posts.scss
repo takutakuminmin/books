@@ -249,4 +249,21 @@ body{
       }
     }
   }
+  h2{
+    text-align: center;
+  }
+  .field{
+    text-align: center;
+  }
+  .actions{
+    text-align: center;
+  }
+  .sessions {
+    display: block;
+    text-align: center;
+    // margin-left: 200px;
+    text-decoration: none;
+    // align-items: center;
+    // margin: 0 auto;
+  }
 }

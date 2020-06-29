@@ -1,48 +1,71 @@
-<div class="postTitle">
-  <%= @post.title %>
-</div>
-<div class="postTitle-sub">
-  <div class="postPage">
-    P
-    <%= @post.page %>
+<header class="header">
+  <div class="header__title">
+    <%= link_to "BOOKS", root_path, class: "header__title--text" %>
   </div>
-  <div class="postLine">
-    L
-    <%= @post.line %>
-  </div>
-</div>
-<div class="postDate">
-  <%= @post.created_at %>
-</div>
-<div class="postAuthor">
-</div>
-<% if user_signed_in? && current_user.id == @post.user_id %>
-  <div class="postManage">
-    <%= link_to "編集", edit_post_path(@post.id), class: "postManage__edit" %>
-    <%= link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete" %>
-  </div>
-<% end %>
-<div class="postText">
-  <%= simple_format @post.content %>
-</div>
-<div class="container">
-  <% if current_user %>
-    <%= form_with(model: [@post, @comment], local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-      <%= form.submit "SEND" %>
+  <div class="header__search">
+    <%= form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
     <% end %>
-  <% else %>
-    <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
-  <% end %>
-</div>
-<div class="comments">
-  <h4>＜コメント一覧＞</h4>
-  <% if @comments %>
-    <% @comments.each do |comment| %>
-      <p>
-        <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-        <%= comment.text %>
-      </p>
+  </div>
+  <div class="header__right">
+    <% if user_signed_in? %>
+        <%= link_to current_user.nickname, user_path(current_user), class: "header__right--btn" %>
+        <%= link_to "新規投稿", new_post_path, class: "header__right--btn" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
     <% end %>
+  </div>
+</header>
+<div class="contents">
+  <div class="postTitle">
+    <%= @post.title %>
+  </div>
+  <div class="postTitle-sub">
+    <div class="postPage">
+      P
+      <%= @post.page %>
+    </div>
+    <div class="postLine">
+      L
+      <%= @post.line %>
+    </div>
+  </div>
+  <div class="postDate">
+    <%= @post.created_at %>
+  </div>
+  <div class="postAuthor">
+  </div>
+  <% if user_signed_in? && current_user.id == @post.user_id %>
+    <div class="postManage">
+      <%= link_to "編集", edit_post_path(@post.id), class: "postManage__edit" %>
+      <%= link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete" %>
+    </div>
   <% end %>
+  <div class="postText">
+    <%= simple_format @post.content %>
+  </div>
+  <div class="container">
+    <% if current_user %>
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+  </div>
+  <div class="comments">
+    <h4>＜コメント一覧＞</h4>
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <%= comment.text %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
 </div>
