@@ -3,6 +3,8 @@
 </div>
 <%= form_with model: @post, class: :form, local: true do |form| %>
   <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
+  <%= form.text_field :page, placeholder: :何ページ目？（半角数字）, class: :form__page %>
+  <%= form.text_field :line, placeholder: :何行目？（半角数字）, class: :form__line %>
   <%= form.text_area :content, placeholder: :コアメッセージ, class: :form__text %>
   <%= form.submit '投稿する', class: :form__btn %>
 <% end %>

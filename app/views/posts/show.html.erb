@@ -1,6 +1,16 @@
 <div class="postTitle">
   <%= @post.title %>
 </div>
+<div class="postTitle-sub">
+  <div class="postPage">
+    P
+    <%= @post.page %>
+  </div>
+  <div class="postLine">
+    L
+    <%= @post.line %>
+  </div>
+</div>
 <div class="postDate">
   <%= @post.created_at %>
 </div>

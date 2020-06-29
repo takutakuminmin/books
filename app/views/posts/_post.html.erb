@@ -5,6 +5,10 @@
   <div class="content__right">
     <div class="content__right__top">
       <%= link_to post.title, post_path(post.id), class: "content__right__top--title" %>
+      P
+      <%= link_to post.page, post_path(post.id), class: "content__right__top--page" %>
+      L
+      <%= link_to post.line, post_path(post.id), class: "content__right__top--line" %>
     </div>
     <div class="content__right__bottom">
       <div class="content__right__bottom--userName">
