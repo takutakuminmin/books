@@ -18,6 +18,17 @@ body{
         color: #fff;
       }
     }
+    &__search{
+      line-height: 100px;
+      .search-input{
+        height: 50px;
+        width: 500px;
+      }
+      .search-btn{
+        height: 50px;
+        width: 60px;
+      }
+    }
     &__right{
       a {
         text-decoration: none;
