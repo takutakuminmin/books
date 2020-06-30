@@ -241,9 +241,10 @@ body{
     // text-align: center;
     padding: 5px;
     margin-top: 15px;
-    margin-left: 50px;
+    // border-bottom: 50px solid #f6f6f6;
     a {
       // color: $accent;
+      margin-left: 50px;
       &:hover {
         text-decoration: underline;
       }
