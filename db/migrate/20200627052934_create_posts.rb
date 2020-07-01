@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.text :page
       t.text :line
       t.text :content
+      t.integer :likes_count
       t.timestamps
     end
   end
