@@ -47,6 +47,19 @@
   <div class="postText">
     <%= simple_format @post.content %>
   </div>
+  <%# <h3>いいね件数: </h3> %>
+  <% if current_user.already_liked?(@post) %>
+    <div class="liked">
+      <%= button_to 'いいね済', post_like_path(@post), method: :delete, class: "like-btn-on" %>
+      <h1><%= @post.likes.count %></h1>
+    </div>
+  <% else %>
+    <div class="like">
+      <%= button_to 'いいね！', post_likes_path(@post), class: "like-btn" %>
+      <h1><%= @post.likes.count %></h1>
+    </div>
+  <% end %>
+
   <div class="container">
     <% if current_user %>
       <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |form| %> 
