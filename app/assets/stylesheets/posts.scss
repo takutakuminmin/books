@@ -57,7 +57,7 @@ body{
       display: flex;
       &__left{
         padding-right: 20px;
-        &--image{
+        .img {
           height: 55px;
           width: 55px;
           border: solid 1px;
@@ -154,7 +154,7 @@ body{
         display: block;
         border-radius: 5px;
         color: #ffffff;
-        background-color:#0482e9;
+        background-color:#BDBDBD;
         padding: 0 10px;
         text-decoration: none;
         margin-right: 10px;
@@ -163,7 +163,7 @@ body{
         display: block;
         border-radius: 5px;
         color: #ffffff;
-        background-color:#0482e9;
+        background-color:#ff4040;
         padding: 0 10px;
         text-decoration: none;
         margin-left: 10px;
@@ -231,11 +231,12 @@ body{
       margin-top: 30px;
     }
     input{
-      background-color: #97fff6;
+      background-color: #0482e9;
       height: 50px;
       width: 250px;
       margin-top: 20px;
       border-radius: 15px;
+      color: #ffffff;
     }
   }
   .comments {
@@ -279,6 +280,7 @@ body{
       height: 50px;
       width: 200px;
       font-size: 20px;
+      color: #ffffff;
     }
     h1{
       margin-top: 50px;

@@ -23,11 +23,6 @@
   <div class="postTitle">
     <%= @user.nickname %>さんの投稿一覧
   </div>
-  <h3>いいねしている投稿</h3>
-  <% @user.liked_posts.each do |post| %>
-    <%= post.user.email %>
-    <%= post.content %>
-  <% end %>
   <% @posts.each do |post| %>
     <%= render partial: "posts/post", locals: { post: post } %>
   <% end %>
