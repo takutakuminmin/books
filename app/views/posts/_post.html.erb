@@ -1,22 +1,20 @@
 <div class="content">
   <div class="content__left">
-    <div class="img">
-      <div class="img--image" style="background-image: url(<%= post.image %>);">
-      </div>
-    </div>
+
   </div>
   <div class="content__right">
     <div class="content__right__top">
     <% if user_signed_in? %>
       <%= link_to post.title, post_path(post.id), class: "content__right__top--title" %>
+      <%= link_to post.author, post_path(post.id), class: "content__right__top--title" %>
       P
       <%= link_to post.page, post_path(post.id), class: "content__right__top--page" %>
       L
       <%= link_to post.line, post_path(post.id), class: "content__right__top--line" %>
       （<%= post.liked_users.count %>）
     <% else %>
-      <%= flash[:log_in] %>
       <%= link_to post.title, new_user_session_path, class: "content__right__top--title" %>
+      <%= link_to post.author, new_user_session_path, class: "content__right__top--title" %>
       P
       <%= link_to post.page, new_user_session_path, class: "content__right__top--page" %>
       L
