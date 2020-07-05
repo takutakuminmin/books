@@ -83,6 +83,10 @@
     <% end %>
   </div>
   <div class="new-post">
-    <%= link_to "投稿", new_post_path, class: "new-post__btn" %>
+    <% if user_signed_in? %>
+      <%= link_to "投稿", new_post_path, class: "new-post__btn" %>
+    <% else %>
+      <%= link_to "投稿", new_user_session_path, class: "new-post__btn" %>
+    <% end %>
   </div>
 </div>
