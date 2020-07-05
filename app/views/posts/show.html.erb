@@ -50,7 +50,6 @@
   <div class="postText">
     <%= simple_format @post.content %>
   </div>
-  <%# <h3>いいね件数: </h3> %>
   <% if current_user.already_liked?(@post) %>
     <div class="liked">
       <%= button_to 'いいね済', post_like_path(@post), method: :delete, class: "like-btn-on" %>
