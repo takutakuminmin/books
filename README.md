@@ -13,10 +13,10 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
+|author|text||
 |title|text||
-|page|integer||
-|line|integer||
+|page|text||
+|line|text||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
