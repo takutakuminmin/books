@@ -52,7 +52,7 @@ body{
     overflow: scroll;
     .content{
       padding: 10px;
-      border-bottom: 1px solid #f6f6f6;
+      border-bottom: 2px solid #f6f6f6;
       display: flex;
       &__left{
         padding-right: 20px;
@@ -309,6 +309,25 @@ body{
   strong{
     a{
       text-decoration: none;
+    }
+  }
+  .new-post{
+    
+    &__btn{
+      height: 150px;
+      width: 150px;
+      line-height: 150px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 50px;
+      color: #ffffff;
+      background: #0482e9;
+      border-radius: 25%;
+      bottom: 50px;
+      right: 50px;
+      position: fixed;
+      color: #ffffff;
     }
   }
 }
