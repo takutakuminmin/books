@@ -5,17 +5,18 @@ body{
     height: 100px;
     width: 100%;
     padding: 0 150px;
-    background-color: #0482e9;
-    color: #fff;
+    background-color: #ffffff;
+    color: #0482e9;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #f6f6f6;
     &__title{
       font-size: 30px;
       line-height: 100px;
       font-weight: bold;
       &--text{
         text-decoration: none;
-        color: #fff;
+        color: #0482e9;
       }
     }
     &__search{
@@ -27,19 +28,21 @@ body{
       .search-btn{
         height: 50px;
         width: 60px;
+        background-color: #fff;
+        // color: #000000
       }
     }
     &__right{
       a {
         text-decoration: none;
         line-height: 100px;
-        color: #fff;
+        color: #0482e9;
         margin-left:15px;
       }
       &--btn{
         text-decoration: none;
         line-height: 100px;
-        color: #fff;
+        color: #0482e9;
         margin-left:15px;
       }
     }
@@ -323,7 +326,7 @@ body{
       font-size: 50px;
       color: #ffffff;
       background: #0482e9;
-      border-radius: 25%;
+      border-radius: 10%;
       bottom: 50px;
       right: 50px;
       position: fixed;
