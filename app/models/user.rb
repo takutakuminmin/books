@@ -11,5 +11,5 @@ class User < ApplicationRecord
     self.likes.exists?(post_id: post.id)
   end
 
-  validates :nickname, presence: true
+  validates :nickname, :email, presence: true
 end
