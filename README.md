@@ -1,5 +1,6 @@
 # README
-# books DB設計
+
+# AirLibrary DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -13,7 +14,7 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|author|text||
+|image|text||
 |title|text||
 |page|text||
 |line|text||

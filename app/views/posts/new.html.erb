@@ -1,12 +1,5 @@
 <%= render partial: "head" %>
 <div class="contents">
-  <div class="new-post">
-    <% if user_signed_in? %>
-      <%= link_to "投稿", new_post_path, class: "new-post__btn" %>
-    <% else %>
-      <%= link_to "投稿", new_user_session_path, class: "new-post__btn" %>
-    <% end %>
-  </div>
   <div class="content__title">
     新規記事の作成
   </div>

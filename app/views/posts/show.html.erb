@@ -15,10 +15,11 @@
       L
       <%= @post.line %>
     </div>
+    <div class="postDate">
+      <%= @post.created_at %>
+    </div>
   </div>
-  <div class="postDate">
-    <%= @post.created_at %>
-  </div>
+  
   <div class="postAuthor">
   </div>
   <% if user_signed_in? && current_user.id == @post.user_id %>
