@@ -12,10 +12,10 @@
   </div>
   <%= form_with model: @post, class: :form, local: true do |form| %>
     <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
-    <%= form.text_field :author, placeholder: :著者名, class: :form__author %>
+    <%= form.text_field :image, placeholder: :著者名, class: :form__author %>
     <%= form.text_field :page, placeholder: :何ページ目？（半角数字）, class: :form__page %>
     <%= form.text_field :line, placeholder: :何行目？（半角数字）, class: :form__line %>
     <%= form.text_area :content, placeholder: :コアメッセージや学んだことを共有しよう！, class: :form__text %>
-    <input type="submit" name="commit" value="投稿する" class="form__btn" data-disable-with="投稿する">
+    <%= form.submit "投稿する", class: :form__btn %>
   <% end %>
 </div>
