@@ -37,6 +37,8 @@ Capistranoによる自動デプロイ
 ### Association
 - has_many :posts
 - has_many :comments
+- has_many :likes
+- has_many :liked_posts
 
 ## postsテーブル
 |Column|Type|Options|
@@ -50,11 +52,22 @@ Capistranoによる自動デプロイ
 ### Association
 - belongs_to :user
 - has_many :comments
+- has_many :likes
+- has_many :liked_posts
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :post
+- belongs_to :user
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |post_id|integer|null: false, foreign_key: true|
 ### Association
