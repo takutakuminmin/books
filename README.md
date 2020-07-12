@@ -47,10 +47,10 @@ Capistranoによる自動デプロイ
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
-|title|text||
+|title|text|null: false|
 |page|text||
 |line|text||
-|text|text||
+|text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
