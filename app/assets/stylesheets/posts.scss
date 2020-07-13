@@ -234,12 +234,12 @@ body{
   }
   .comments {
     padding: 5px;
-    margin-top: 15px;
+    margin: 15px 50px 0 50px;
     font-size: 20px;
+    // margin-left: 50px;
     p{
       margin-bottom: 30px;
       a {
-        margin-left: 50px;
         color: #09bd54;
         &:hover {
           text-decoration: underline;
