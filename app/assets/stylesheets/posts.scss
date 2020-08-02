@@ -47,12 +47,12 @@ body{
   }
   .contents{
     margin: auto;
-    background-color: #fff;
     height: 688px;
     width: 60%;
     overflow: scroll;
     .content{
       padding: 10px;
+      background-color: #fff;
       border-bottom: 2px solid #f6f6f6;
       display: flex;
       &__left{
@@ -348,6 +348,7 @@ body{
     }
   }
   .pagination{
+    // height: 100vh;
     text-align: center;
     font-size: 30px;
     padding: 20px 0;
