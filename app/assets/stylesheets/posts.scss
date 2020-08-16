@@ -293,6 +293,12 @@ body{
   .field{
     text-align: center;
   }
+  .field-remember{
+    text-align: center;
+    input{
+      width: 25px;
+    }
+  }
   .field-profile{
     text-align: center;
     textarea{
