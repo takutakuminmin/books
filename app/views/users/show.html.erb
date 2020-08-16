@@ -1,4 +1,12 @@
 <%= render partial: "posts/head" %>
+<div class="history">
+  <div class="history-top">
+    本の履歴
+  </div>
+  <div class="history-books">
+    <%= @user.profile %>
+  </div>
+</div>
 <div class="contents">
   <div class="postTitle">
     <%= @user.nickname %>さんの投稿一覧
