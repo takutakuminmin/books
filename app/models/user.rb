@@ -10,4 +10,5 @@ class User < ApplicationRecord
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
   end
+  validates :profile, length: { maximum: 200 } #追記
 end
