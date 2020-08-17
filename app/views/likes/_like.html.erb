@@ -3,6 +3,6 @@
     <%= @like_count %>
 </div>
 <div class="like_button">
-    <%= link_to "いいね", likes_create_path(post_id: @post.id), {method: "post", remote: true} %>
+    <%= link_to "いいね！", likes_create_path(post_id: @post.id), {method: "post", remote: true} %>
     <%= @like_count %>
 </div>
