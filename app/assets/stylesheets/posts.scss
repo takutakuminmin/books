@@ -107,11 +107,13 @@ body{
       }
     }
     .postTitle{
+      border-bottom: 2px solid #f6f6f6;
+      width: 30%;
       padding-top: 20px;
       text-align: center;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: bold;
-      margin-bottom: 5px;
+      padding: 4px;
     }
     .postTitle-sub{
       display: flex;
@@ -314,6 +316,7 @@ body{
       color: #ffffff;
       border-radius: 15px;
       width: 60%;
+      height: 40px;
     }
   }
   .signin-Top {
@@ -394,15 +397,24 @@ body{
       color: #09bd54;
     }
   }
+  .username{
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+  }
   .history{
     background-color: #ffffff;
-    width: 60%;
     margin: auto;
     .history-top{
+      border-bottom: 2px solid #f6f6f6;
+      width: 30%;
       text-align: center;
       font-weight: bold;
       font-size: 20px;
-      padding: 10px;
+      padding: 4px;
+      margin-bottom: 10px;
     }
     .history-books{
       padding: 0 30px 30px 30px;
