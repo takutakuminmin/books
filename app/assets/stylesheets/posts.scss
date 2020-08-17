@@ -263,7 +263,7 @@ body{
   }
   .signin-box{
     width: 50%;
-    margin: 60px auto 0;
+    margin: 30px auto 0;
     border-radius: 4px;
     border: 1px #ddd solid;
     padding-bottom: 30px;
@@ -406,6 +406,21 @@ body{
     }
     .history-books{
       padding: 0 30px 30px 30px;
+    }
+  }
+  .signin{
+    height: 100px;
+    width: 100%;
+    background-color: #ffffff;
+    &__title{
+      font-size: 45px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+      &--text{
+        text-decoration: none;
+        color: #09bd54;
+      }
     }
   }
 }
