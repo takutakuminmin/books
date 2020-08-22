@@ -81,3 +81,5 @@ gem 'pry-rails'
 gem 'kaminari'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem "font-awesome-sass"
