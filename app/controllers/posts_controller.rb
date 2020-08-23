@@ -40,6 +40,17 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def new_guest
+    user = User.find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.nickname = "ゲスト"
+      user.profile = "7つの習慣、シン・ニホン、サピエンス全史、サーチインサイドユアセルフ"
+      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+    end
+    sign_in user
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
+
   private
   def post_params
     params.require(:post).permit(:image, :title, :page, :line, :content).merge(user_id: current_user.id)
