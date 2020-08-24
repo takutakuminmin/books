@@ -30,13 +30,13 @@
 
 ## 使用技術
 ### データベース
-MySQL 5.6.47
+- MySQL 5.6.47
 
 ### インフラ
-AWS EC2
+- AWS EC2
 
 ### デプロイ
-Capistranoによる自動デプロイ
+- Capistranoによる自動デプロイ
 
 # AirBook DB設計
 ## usersテーブル
