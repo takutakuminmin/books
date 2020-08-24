@@ -38,6 +38,9 @@
 ### デプロイ
 - Capistranoによる自動デプロイ
 
+### テスト
+- RSpec
+
 # AirBook DB設計
 ## usersテーブル
 |Column|Type|Options|
