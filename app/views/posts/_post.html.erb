@@ -24,7 +24,7 @@
     <div class="content__right__bottom">
       <%= link_to post.user.nickname, "/users/#{post.user_id}", class: "content__right__bottom--userName" %>
       <div class="content__right__bottom--date">
-        <%= post.created_at %>
+        <%= post.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
       </div>
     </div>
   </div>
