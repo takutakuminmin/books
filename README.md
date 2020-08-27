@@ -59,8 +59,8 @@
 |------|----|-------|
 |image|text||
 |title|text|null: false|
-|page|text||
-|line|text||
+|page|text|null: false|
+|line|text|null: false|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
