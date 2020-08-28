@@ -17,5 +17,5 @@ class User < ApplicationRecord
     self.likes.exists?(post_id: post.id)
   end
   validates :profile, length: { maximum: 200 }
-  validates :nickname, presence: true, length: { maximum: 6 }
+  validates :nickname, presence: true, length: { maximum: 10 }
 end
