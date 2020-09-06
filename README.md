@@ -51,6 +51,7 @@
 
 ### テスト
 - RSpec
+- factory_bot
 
 ### その他
 - GitHub
