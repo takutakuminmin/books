@@ -53,9 +53,9 @@
 - RSpec
 - factory_bot
 
-### その他
+### バージョン管理
+- Git
 - GitHub
-
 
 # DB設計
 ## usersテーブル

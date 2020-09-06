@@ -15,7 +15,8 @@ body{
     border-bottom: 1px solid #f6f6f6;
     margin: 0 auto;
     &__title{
-      font-size: 45px;
+      font-size: 50px;
+      font-family: cursive;
       line-height: 100px;
       font-weight: bold;
       margin-right: 40px;
@@ -396,6 +397,9 @@ body{
       right: 50px;
       position: fixed;
       color: #ffffff;
+    }
+    &__btn:hover {
+      box-shadow: 0 0 20px #09bd54;
     }
   }
   .pagination{
