@@ -433,8 +433,6 @@ body{
       line-height: 170px;
       text-align: center;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 60px;
       color: #ffffff;
       background: #09bd54;
       border-radius: 20%;
@@ -446,6 +444,14 @@ body{
     }
     &__btn:hover {
       box-shadow: 0 0 20px #09bd54;
+    }
+    i{
+      bottom: 94px;
+      right: 77px;
+      font-weight: bold;
+      font-size: 90px;
+      position: fixed;
+      color: #ffffff;
     }
   }
   .pagination{
