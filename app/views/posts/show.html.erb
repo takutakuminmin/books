@@ -32,12 +32,18 @@
   </div>
   <% if current_user.already_liked?(@post) %>
     <div class="liked">
-      <%= button_to '♡', post_like_path(@post), method: :delete, class: "like-btn-on" %>
+      <label>
+        <%= button_to '', post_like_path(@post), method: :delete, class: "like-btn-on" %>
+        <i class="fas fa-heart unlike-btn"></i>
+      </label>
       <h1><%= @post.likes.count %></h1>
     </div>
   <% else %>
     <div class="like">
-      <%= button_to '♡', post_likes_path(@post), class: "like-btn" %>
+      <label>
+        <%= button_to '', post_likes_path(@post), class: "like-btn" %>
+        <i class="far fa-heart like-btn" ></i>
+      </label>
       <h1><%= @post.likes.count %></h1>
     </div>
   <% end %>
@@ -46,7 +52,7 @@
     <% if current_user %>
       <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |form| %> 
         <%= form.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox" %>
-        <%= form.submit "SEND", class: "form__submit" %>
+        <%= form.submit "送信", class: "form__submit" %>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
