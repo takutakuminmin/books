@@ -1,7 +1,7 @@
 <%= render partial: "head" %>
 <div class="contents">
   <div class="content__title">
-    新規記事の作成
+    <%# 記事作成 %>
   </div>
   <%= form_with model: @post, class: :form, local: true do |form| %>
     <%= form.text_field :title, placeholder: :本の名前（必須）, class: :form__title %>
