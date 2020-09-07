@@ -263,12 +263,13 @@ body{
     }
     &__btn{
       display: block;
-      width: 55%;
       height: 50px;
+      width: 250px;
       margin: 50px auto ;
-      border-radius: 30px;
+      border-radius: 15px;
       color: #ffffff;
-      background-color: #09bd54;
+      font-weight: bold;
+      background-color: #00973f;
     }
   }
   .user{
