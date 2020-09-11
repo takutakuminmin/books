@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 2020_08_15_092033) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "image"
-    t.text "title"
-    t.text "page"
-    t.text "line"
-    t.text "content"
+    t.text "title", null: false
+    t.text "page", null: false
+    t.text "line", null: false
+    t.text "content", null: false
     t.integer "likes_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
