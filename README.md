@@ -43,6 +43,10 @@
 ### データベース
 - MySQL 5.6.47
 
+### コンテナ
+- Docker
+- docker-compose
+
 ### インフラ
 - AWS EC2
 
