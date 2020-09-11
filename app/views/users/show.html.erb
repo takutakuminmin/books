@@ -19,9 +19,13 @@
   <% end %>
   <div class="new-post">
     <% if user_signed_in? %>
-      <%= link_to "投稿", new_post_path, class: "new-post__btn" %>
+      <%= link_to new_post_path, class: "new-post__btn" do%>
+        <i class="fas fa-edit"></i>
+      <%end%>
     <% else %>
-      <%= link_to "投稿", new_user_session_path, class: "new-post__btn" %>
+      <%= link_to new_user_session_path, class: "new-post__btn" do%>
+        <i class="fas fa-edit"></i>
+      <%end%>
     <% end %>
   </div>
 </div>
