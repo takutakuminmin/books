@@ -8,7 +8,7 @@
       <%= link_to post.image, post_path(post.id), class: "content__right__top--title" %>
       Page
       <%= link_to post.page, post_path(post.id), class: "content__right__top--page" %>
-      Line
+      　Line
       <%= link_to post.line, post_path(post.id), class: "content__right__top--line" %>
       　　いいね <%= post.liked_users.count %>
     <% else %>
@@ -16,7 +16,7 @@
       <%= link_to post.image, new_user_session_path, class: "content__right__top--title" %>
       Page
       <%= link_to post.page, new_user_session_path, class: "content__right__top--page" %>
-      Line
+      　Line
       <%= link_to post.line, new_user_session_path, class: "content__right__top--line" %>
       　　いいね <%= post.liked_users.count %>
     <% end %>
