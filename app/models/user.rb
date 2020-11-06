@@ -9,6 +9,9 @@ class User < ApplicationRecord
       # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
   end
+  def remember_me
+    true
+  end
   has_many :posts, dependent: :destroy
   has_many :comments
   has_many :likes, dependent: :destroy
