@@ -93,14 +93,14 @@ body{
     width: 900px;
     overflow: scroll;
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    .detail{
+      display: none;
+    }
     .content{
-      padding: 20px;
+      padding: 20px 50px 20px 50px;
       background-color: #fff;
       border-bottom: 1px solid #e9e9e9;
       display: flex;
-      &__left{
-        padding-right: 20px;
-      }
       &__right{
         width: calc(100%-100px);
         &__top{
